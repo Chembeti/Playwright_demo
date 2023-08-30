@@ -1,0 +1,27 @@
+{
+  "name": "evolve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npx ts-node src/helpers/report/init.ts",
+    "test": "cross-env FORCE_COLOR=0 cucumber-js --config=config/cucumber.js || true",
+    "posttest": "npx ts-node src/helpers/report/report.ts",
+    "test:failed": "cucumber-js -p rerun @rerun.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.4.0",
+    "@playwright/test": "^1.37.1",
+    "dotenv": "^16.3.1",
+    "multiple-cucumber-html-reporter": "^3.4.0",
+    "ts-node": "^10.9.1",
+    "winston": "^3.10.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "fs-extra": "^11.1.1"
+  }
+}
