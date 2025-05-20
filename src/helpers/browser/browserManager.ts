@@ -1,9 +1,14 @@
 import { LaunchOptions, chromium, firefox, webkit } from "playwright-core";
 
-const options: LaunchOptions = {
-    headless: !true
+const defaultOptions: LaunchOptions = {
+    headless: process.env.CI === 'true' || (process.env.IS_LOCAL !== 'true'),
+    args: ['--window-size=1920,1080'],
 }
-export const invokeBrowser = () => {
+
+export const invokeBrowser = (options: LaunchOptions = null) => {
+    if(options == null){
+        options = defaultOptions;
+    }
     //const browserType = process.env.npm_config_BROWSER || "chrome";
     const browserType = process.env.BROWSER || "chrome";
     switch (browserType) {

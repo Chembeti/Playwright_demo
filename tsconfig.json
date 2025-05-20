@@ -4,6 +4,12 @@
             "./node_modules/@types",
             "src/helpers/types"
         ],
-        "resolveJsonModule": true
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "target": "ES2021",
+        "lib": [
+            "ES2021",
+            "dom",
+        ]
     }
 }

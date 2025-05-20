@@ -1,0 +1,19 @@
+export default abstract class DataBagKeys{
+    static readonly FAILED_STEP = "failedStep";
+    static readonly ERROR = "error";
+    static readonly USER_AUTH_INFO_FILE_PATH = "userAuthInfoFilePath";
+    static readonly SCREEN_WIDTH = "availWidth";
+    static readonly SCREEN_HEIGHT = "availHeight";
+    static readonly OAUTH_TOKEN = "oauthToken";
+    static readonly QUERY_PARAMETERS = "queryParams";
+    static readonly AUTH_HEADERS = "authHeaders";
+    static readonly ADDITIONAL_HEADERS = "additionalHeaders";
+    static readonly REQUEST_BODY = "requestBody";
+    static readonly SCENARIO_NAME = "scenarioName";
+    static readonly LAST_SCENARIO_EXECUTION_COMPLETED = "lastScenarioexecutionCompleted";
+    static readonly LAST_SCENARIO_ARTIFACTS_DIRECTORY_NAME = "lastScenarioArtifactsDirectoryName";
+    static readonly LAST_SCENARIO_RETRY_INDICATOR_KEY = "lastScenarioRetryIndicatorKey";
+    static readonly PICKLE_NAME = "pickleName";
+    static readonly OPERATION_COMPLETION_MESSAGE = "operationCompletionMsg";
+    static readonly DATA_REQ_COMMON = "dataReqCommon";
+}

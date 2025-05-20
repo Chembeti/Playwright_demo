@@ -4,7 +4,7 @@ report.generate({
     jsonDir: "test-results",
     reportPath: "test-results/reports/",
     reportName: "Playwright Automation Report",
-    pageTitle: "Evolve test report",
+    pageTitle: "Sample Automation test report",
     displayDuration: false,
     metadata: {
         browser: {

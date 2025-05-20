@@ -1,27 +1,31 @@
 {
-  "name": "evolve",
+  "name": "playwright-cucumber-typescript-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "pretest": "npx ts-node src/helpers/report/init.ts",
     "test": "cross-env FORCE_COLOR=0 cucumber-js --config=config/cucumber.js || true",
-    "posttest": "npx ts-node src/helpers/report/report.ts",
-    "test:failed": "cucumber-js -p rerun @rerun.txt"
+    "posttest": "npx ts-node src/helpers/report/reportGenerator.ts",
+    "test:failed": "cucumber-js --config=config/cucumber.js -p rerun @rerun.txt"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^9.4.0",
-    "@playwright/test": "^1.37.1",
+    "@playwright/test": "^1.52.0",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.3.1",
     "multiple-cucumber-html-reporter": "^3.4.0",
     "ts-node": "^10.9.1",
     "winston": "^3.10.0"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^11.3.0",
     "cross-env": "^7.0.3",
-    "fs-extra": "^11.1.1"
+    "date-fns-tz": "^3.2.0",
+    "fs-extra": "^11.1.1",
+    "ping": "^0.4.4"
   }
 }
